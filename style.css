@@ -129,7 +129,7 @@
 
 
 /* --- css/animate.min.css --- */
-@charset "UTF-8";
+
 
 /*!
 Animate.css - http://daneden.me/animate
@@ -4261,7 +4261,7 @@ i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
 
 
 /* --- css/youtube-popup.css --- */
-@charset "UTF-8";
+
 
 /*
     Name: YouTubePopUp
@@ -12226,28 +12226,62 @@ ul.side-menu-social-media li a:hover{
   
 }
 @media only screen and (max-width:768px){
+.image-shape {
+    display: none;
+}
 h1 {
     font-size: 50px;
     font-weight: 600;
     line-height: 60px;
 }
 .banner-one-info {
-    padding: 190px 0 95px;
-    height: 860px;
+    padding: 120px 0 50px;
+    height: auto;
 }
 .banner-one-slider ul.slick-dots {
     right: 10px;
     top: calc(50% + 80px);
 }
 .banner-one-box {
-    right: 0px;
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    margin-top: 20px;
 }
 h2 {
     font-size: 35px;
     line-height: 50px;
 }
-.service-one-box{
-    padding: 24px;
+.service-one-inner {
+    border: none;
+    gap: 20px;
+}
+.service-one-box {
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 0;
+    overflow: hidden;
+    border: none !important;
+}
+.service-one-box .service-one-info h4, 
+.service-one-box .service-one-info p, 
+.service-one-box a, 
+.service-one-box .service-one-icon-box {
+    color: var(--loanlift-text-light);
+    position: relative;
+    z-index: 2;
+}
+.service-one-box .service-one-box-image {
+    left: 0;
+    opacity: 1;
+}
+.service-one-box a {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.service-one-box a i {
+    transform: rotate(-45deg);
+    color: var(--loanlift-text-light);
 }
 .heading-subtitle {
     margin-bottom: 10px;
@@ -12263,7 +12297,7 @@ h2 {
     top: auto;
 }
 .features-one-image {
-    height: 490px;
+    height: auto;
     width: 100%;
     margin: 0;
 }
@@ -12277,7 +12311,17 @@ ul.counter-box-one li {
     width: 45%;
 }
 .process-one-box {
-    max-width: 46%;
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+.process-one-box-devider::after {
+    display: none;
+}
+.process-one-box-details p {
+    margin-top: 15px;
+}
+.process-one-box-title {
+    margin-bottom: 15px;
 }
 .testimonial-one-item p {
     font-size: 18px;
@@ -12482,11 +12526,21 @@ a.case-studies-two-btn {
         bottom: 80px;
     }
     .case-studies-item-inner-two {
-        width: 430px;
-        height: 575px;
+        width: 100%;
+        max-width: 430px;
+        height: auto;
+        min-height: 575px;
     }
 }
 @media only screen and (max-width:550px){
+    h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    h2 {
+        font-size: 28px;
+        line-height: 38px;
+    }
     .btn-primary,
     .btn-secondary,
     .btn-outline-secondary{
@@ -12600,7 +12654,7 @@ a.case-studies-two-btn {
         max-width: 100%;
     }
     .process-one-box-devider::after{
-        width: 100%;
+        display: none;
     }
     .case-studies-one {
         padding-top: 50px;
@@ -12615,16 +12669,17 @@ a.case-studies-two-btn {
     }
     .service-one-box{
         flex-direction: column;
-        align-items: baseline;
+        align-items: flex-start;
+        gap: 20px;
     }
     .service-one-box a{
-        margin-top: 10px;
+        margin-top: 0;
     }
     .why-choose-box-one-title{
         margin-bottom: 5px;
     }
     .banner-one-info {
-        height: 760px;
+        height: auto;
     }
     .banner-one-slider ul.slick-dots {
         display: none !important;
@@ -12684,8 +12739,9 @@ a.case-studies-two-btn {
         padding: 5px;
     }
     .case-studies-item-inner-two {
-        width: 300px;
-        height: 500px;
+        width: 100%;
+        height: auto;
+        min-height: 500px;
     }
     .case-studies-item-inner-two:hover .case-studies-two-tagline {
         margin-bottom: 10px;
@@ -12708,7 +12764,7 @@ a.case-studies-two-btn {
     }
     .process-two-box {
         padding: 15px;
-        width: 300px;
+        width: 100%;
     }
     .testimonial-two button.slick-arrow {
         left: 36%;
@@ -12843,8 +12899,8 @@ a.case-studies-two-btn {
         display: none;
     }
     .banner-one-info {
-        padding: 190px 0 95px;
-        height: 790px;
+        padding: 120px 0 50px;
+        height: auto;
     }
     ul.bradcrumb {
         flex-wrap: wrap;
